@@ -6,7 +6,7 @@
 
 body {
     height: 100vh;
-    background: rgb(216, 216, 13);
+    background: linear-gradient(rgb(255, 255, 50),rgb(102, 102, 219));
 }
 
 img {
@@ -20,6 +20,9 @@ border: 2px solid rgb(18, 18, 141);
 display: flex;
 flex-wrap: wrap;
 perspective: 1000px;
+width: 1200px;
+margin: 0 auto;
+
 }
 
 .card {
@@ -29,8 +32,9 @@ perspective: 1000px;
     height: 150px;
     transform-style: preserve-3d;
     transition: transform all .5s;
-    
-    
+    margin: 5px;
+    margin: 0 auto;
+
 }
 
 .card:active {
