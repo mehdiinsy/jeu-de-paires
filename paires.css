@@ -13,13 +13,13 @@ img {
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0.3;
 }
 
 .memory-game {
 border: 2px solid rgb(18, 18, 141);
 display: flex;
 flex-wrap: wrap;
+perspective: 1000px;
 }
 
 .card {
@@ -27,12 +27,26 @@ flex-wrap: wrap;
     border: 2px solid lime;
     width: 25%;
     height: 150px;
+    transform-style: preserve-3d;
+    transition: transform all .5s;
     
     
+}
+
+.card:active {
+    transition: transform .2s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
 }
 
 .front-face,
 .back-face {
     border: 2px solid ;
+    backface-visibility: hidden;
+}
 
+.front-face {
+    transform: rotateY(180deg);
 }
